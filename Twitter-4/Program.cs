@@ -7,16 +7,11 @@ namespace Twitter_4
     {
         static void Main(string[] args)
         {
-            var text = new List<string> { "code", "doce", "ecod", "framer", "frame" };
+            List<string> text = new List<string> { "code", "doce", "ecod", "framer", "frame" };
 
-            foreach (var item in text)
-            {
-                if (item[0] != item[1])
-                {
-                    text.RemoveAt(1);
-                }
-                Console.WriteLine(item);
-            }
+            int N = 5;
+
+            removeWord(text, N);
         }
 
         public static void removeWord(List<string> removed, int N)
@@ -28,6 +23,8 @@ namespace Twitter_4
             for (int i = 0; i < N; i++)
             {
                 string word = removed[i];
+
+                word = Sort(word);
 
                 if (!found.Contains(word))
                 {
