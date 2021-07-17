@@ -47,6 +47,10 @@ namespace Twitter_4
         public static string Sort(string input)
         {
             char[] newArray = input.ToCharArray();
+
+            Array.Sort(newArray);
+
+            return string.Join("", newArray);
         }
     }
 }
