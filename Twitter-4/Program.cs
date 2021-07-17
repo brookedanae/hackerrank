@@ -36,10 +36,17 @@ namespace Twitter_4
                 }
             }
 
+            result.Sort();
+
             for (int i = 0; i < result.Count; i++)
             {
                 Console.WriteLine(result[i] + " ");
             }
-    }
+        }
+
+        public static string Sort(string input)
+        {
+            char[] newArray = input.ToCharArray();
+        }
     }
 }
